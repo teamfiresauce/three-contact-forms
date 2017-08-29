@@ -1,0 +1,23 @@
+{
+  "name": "three-contact-forms",
+  "version": "1.0.0",
+  "description": "The spiciest contact forms you could ever imagine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamfiresauce/three-contact-forms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teamfiresauce/three-contact-forms/issues"
+  },
+  "homepage": "https://github.com/teamfiresauce/three-contact-forms#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "jquery": "^3.2.1"
+  }
+}
