@@ -1,63 +1,74 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="./../styles.css">
 
-
-
-
-<h2> HTML EMAIL</h2>
-
+	<title>Mail to email form</title>
 </head>
 
 <body>
-
-<p id="bar">Progress:<progress value="25" max="100" id=""></progress></p>
-	
-<form action="../mail.php" method="post" enctype="multipart/form-data" name="attend" id="conference">
-
-<fieldset>	
-	<legend><span>Personal Information</span></legend>	
-	
-		<label><span>Full Name:</span> <input name="Full name" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{3,99}" required></label>
-		
-		<label><span>Address: </span><input name="address" type="text" value="" placeholder="Address" pattern="[a-zA-Z0-9 -._]{3,99}" required></label>	
-		
-	
-		<label><span>Email: </span><input name="email" type="email" value="" placeholder="your email goes here" required></label>
-
-		<label><span>Phone: </span><input name="phone" type="tel" value="" placeholder="1112225555" pattern="[0-9]{10,20}" required></label>
-	
-</fieldset>
-
-<fieldset>
-	<legend><span>Company Info</span></legend>
-		<label><span>Company:</span><input name="company" type="text" ></label>
-		
-		<label><span>Number of Employees:</span><input name="employeeCount" type="number" ></label>
-
-		<label><span>Web Site:</span><input name="webURL" type="url" placeholder="" ></label>
-
-		<label><span>Prefered Date:</span><input name="date" type="date" ></label>
-		
-		<label><span>Badge Color:</span><input name="color" type="color" ></label>
-		
-		<label><span>Credit Card:</span><input name="credit" type="number" autocomplete="off" ></label>
-		
-</fieldset>
-	
+	<header>
+		<div>
+			<img class="hot-icon" src="./images/hot.png" alt="">
+			<big>HTML EMAIL</big>
+		</div>
+		<a href="./../index.html">HOME</a>
+		<a href="./index.html">HTML FORM</a>
+		<a href="./../jquery/index.html">JQUERY FROM</a>
+		<a href="./../axios/index.html">AXIOS FORM</a>
+	</header>
+	<div class="container">
+		<div>
+			<p id="bar">Progress:
+				<progress value="25" max="100" id=""></progress>
+			</p>
+		</div>
 
 
-	
-<input type="submit" value="Sign me up!" class="submitBtn">
-<input name="subject" type="hidden" value="Conference Registration"  >
-<input name="redirect" type="hidden" value="thanks.html">
+		<form action="../mail.php" method="post" enctype="multipart/form-data" name="attend" id="conference">
+
+			<fieldset>
+				<legend><span>Personal Information</span></legend>
+
+				<label><span>Full Name:</span> <input name="Full name" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{3,99}" required></label>
+
+				<label><span>Address: </span><input name="address" type="text" value="" placeholder="Address" pattern="[a-zA-Z0-9 -._]{3,99}" required></label>
 
 
-</form>	
+				<label><span>Email: </span><input name="email" type="email" value="" placeholder="your email goes here" required></label>
+
+				<label><span>Phone: </span><input name="phone" type="tel" value="" placeholder="1112225555" pattern="[0-9]{10,20}" required></label>
+
+			</fieldset>
+
+			<fieldset>
+				<legend><span>Company Info</span></legend>
+				<label><span>Company:</span><input name="company" type="text" ></label>
+
+				<label><span>Number of Employees:</span><input name="employeeCount" type="number" ></label>
+
+				<label><span>Web Site:</span><input name="webURL" type="url" placeholder="" ></label>
+
+				<label><span>Prefered Date:</span><input name="date" type="date" ></label>
+
+				<label><span>Badge Color:</span><input name="color" type="color" ></label>
+
+				<label><span>Credit Card:</span><input name="credit" type="number" autocomplete="off" ></label>
+
+			</fieldset>
+
+			<input type="submit" value="Sign me up!" class="submitBtn">
+			<input name="subject" type="hidden" value="Conference Registration">
+			<input name="redirect" type="hidden" value="thanks.html">
 
 
-
+		</form>
+	</div>
 
 </body>
+
 </html>
