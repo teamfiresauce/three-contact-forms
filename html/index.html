@@ -18,20 +18,20 @@
 <fieldset>	
 	<legend><span>Information</span></legend>	
 	
-		<label><span>Name:</span> <input name="Full name" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{3,99}" required></label>
+		<label><span>Name:</span> <input name="name" type="text" value="" placeholder="your name" pattern="[a-zA-Z -._]{3,99}" required></label>
 	
 	
 	</br>
 		
 	
-		<label><span>Email: </span><input name="email" type="email" value="" placeholder="your email goes here" required></label>
+		<label><span>Email: </span><input name="from" type="email" value="" placeholder="your email goes here" required></label>
 		
 		
 	</br>
 
 		<label>Comments</label> 
 	</br>
-		<textarea name="Details" rows="10" cols="40" class="myTextInput" ></textarea>
+		<textarea name="body" rows="10" cols="40" class="body" ></textarea>
 	
 </fieldset>
 
@@ -40,7 +40,7 @@
 
 
 	
-<input type="submit" value="Sign me up!" class="submitBtn">
+<input type="submit" value="Send Email!" class="submitBtn">
 <input name="subject" type="hidden" value="SubmitEmail"  >
 <input name="redirect" type="hidden" value="thanks.html">
 
