@@ -1,53 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./../styles.css">
-    
+
     <title>JQUERY FORM</title>
 </head>
-<body>
-    	<header>
-                <div>
-                    <img class="hot-icon" src="./../images/hot.png" alt="">
-                    <big>HTML EMAIL</big>
-                </div>
-                <a href="./../index.html">HOME</a>
-                <a href="./../html/index.html">HTML FORM</a>
-                <a href="./index.html">JQUERY FROM</a>
-                <a href="./../axios/index.html">AXIOS FORM</a>
-            </header>
 
-<!-- Form started -->
-    <form action="./../mail.php" method="post" class="ajax">
+<body>
+    <header>
+        <div>
+            <img class="hot-icon" src="./../images/hot.png" alt="">
+            <big>HTML EMAIL</big>
+        </div>
+        <a href="./../index.html">HOME</a>
+        <a href="./../html/index.html">HTML FORM</a>
+        <a href="./index.html">JQUERY FROM</a>
+        <a href="./../axios/index.html">AXIOS FORM</a>
+    </header>
+
+    <!-- Form started -->
+    <form action="http://erichie.com/firesauce/api/mail.php" method="POST" class="ajax">
         <input type="text" name="name" placeholder="Your Name"> <br>
         <input type="text" name="from" placeholder="Your email"> <br>
         <textarea name="body" placeholder="Your message"></textarea> <br>
         <input type="submit" value="send">
     </form>
-<!-- Form ended --> 
+    <!-- Form ended -->
 
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
 
- <!-- Javascript for Jquery -->
- <script type="text/javascript"> $('form.ajax').on('submit', function() {
-        var that = $(this),
-            url = that.attr('action')
-            method = that.attr('method')
+    <!-- Javascript for Jquery -->
+    <script type="text/javascript">
+        $('form.ajax').on('submit', function () {
+            var that = $(this),
+                url = that.attr('action');
+            method = that.attr('method');
             data = {};
 
-        that.find('[name]').each(function(index,value)) {
-            var that = $(this);
-                name = that.attr('name')
+            that.find('[name]').each(function (index, value) {
+                var that = $(this);
+                name = that.attr('name');
                 value = that.val();
-            data[name] = value;
+                data[name] = value;
+                data.to = "jtporter9@gmail.com";
+            });
+
+            console.log('url:', url);
+            console.log('method:', method);
+            console.log('data:', data);
+
+            $.ajax({
+                type: method,
+                url: url,
+                data: data,
+                crossDomain: true,
+                success: function () { console.log("Success"); },
+                error: function () { console.log('Failed!'); },
+            });
+
+            return false;
         });
+    </script>
+    <!-- End  of Javascript for Jquery -->
 
-        return false;
-    }); </script>
-<!-- End  of Javascript for Jquery -->
 
-    
 </body>
+
 </html>
