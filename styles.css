@@ -53,3 +53,13 @@ footer {
     display: flex;
     justify-content: center;
 }
+
+input, textarea {
+    margin:10px 0;
+    width:300px;
+    padding:5px;
+}
+
+textarea {
+    height: 50%;
+}
