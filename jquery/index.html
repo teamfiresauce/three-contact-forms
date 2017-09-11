@@ -31,6 +31,12 @@
             <input type="text" name="from" placeholder="Your email"> <br>
             <textarea name="body" placeholder="Your message"></textarea> <br>
             <input type="submit" value="send">
+            <p style="display:none;" id="response_messsage_success">
+                You message was successfully sent.
+            </p>
+            <p style="display:none;" id="response_messsage_failed">
+                Something went wrong with your message.
+            </p>
         </form>
         <!-- Form ended -->
 
@@ -50,10 +56,10 @@
 
             that.find('[name]').each(function (index, value) {
                 var that = $(this);
-                name = that.attr('name');
+                name = that.attr('name');s
                 value = that.val();
                 data[name] = value;
-                data.to = "jtporter9@gmail.com";
+                data.to = "hiro@mrhiro.com";
             });
 
             console.log('url:', url);
@@ -65,8 +71,15 @@
                 url: url,
                 data: data,
                 crossDomain: true,
-                success: function () { console.log("Success"); },
-                error: function () { console.log('Failed!'); },
+                success: function () {
+                data = {};
+                console.log("Success");
+                document.getElementById("response_messsage_success").style.display = "block";
+            },
+                error: function () {
+                console.log("Failed");
+                document.getElementById("response_messsage_failed").style.display = "block";
+            },
             });
 
             return false;
