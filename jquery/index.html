@@ -11,7 +11,7 @@
 <body>
     	<header>
                 <div>
-                    <img class="hot-icon" src="./images/hot.png" alt="">
+                    <img class="hot-icon" src="./../images/hot.png" alt="">
                     <big>HTML EMAIL</big>
                 </div>
                 <a href="./../index.html">HOME</a>
@@ -19,6 +19,35 @@
                 <a href="./index.html">JQUERY FROM</a>
                 <a href="./../axios/index.html">AXIOS FORM</a>
             </header>
+
+<!-- Form started -->
+    <form action="./../mail.php" method="post" class="ajax">
+        <input type="text" name="name" placeholder="Your Name"> <br>
+        <input type="text" name="from" placeholder="Your email"> <br>
+        <textarea name="body" placeholder="Your message"></textarea> <br>
+        <input type="submit" value="send">
+    </form>
+<!-- Form ended --> 
+
+
+ <!-- Javascript for Jquery -->
+ <script type="text/javascript"> $('form.ajax').on('submit', function() {
+        var that = $(this),
+            url = that.attr('action')
+            method = that.attr('method')
+            data = {};
+
+        that.find('[name]').each(function(index,value)) {
+            var that = $(this);
+                name = that.attr('name')
+                value = that.val();
+            data[name] = value;
+        });
+
+        return false;
+    }); </script>
+<!-- End  of Javascript for Jquery -->
+
     
 </body>
 </html>
