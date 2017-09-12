@@ -24,7 +24,6 @@
 
     <div class="container">
 
-
         <!-- Form started -->
         <form action="http://erichie.com/firesauce/api/mail.php" method="POST" class="ajax">
             <input type="text" name="name" placeholder="Your Name"> <br>
@@ -56,7 +55,7 @@
 
             that.find('[name]').each(function (index, value) {
                 var that = $(this);
-                name = that.attr('name');s
+                name = that.attr('name');
                 value = that.val();
                 data[name] = value;
                 data.to = "hiro@mrhiro.com";
